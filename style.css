@@ -6,8 +6,8 @@
 }
 
 /* X ruimtes tussen de blokken */
-/* article is niet groot genoeg */
-/* mobiele layout */
+/* X article is niet groot genoeg */
+/* X mobiele layout */
 
 body {
   background-color: aquamarine;
@@ -49,4 +49,21 @@ article {
 footer {
   background-color: gold;
   grid-area: footer;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "small-sidebar"
+      "big-sidebar"
+      "article"
+      "footer";
+    grid-template-rows: 100px 80px auto auto 50px;
+  }
+
+  header {
+    background-color: fuchsia;
+  }
 }
